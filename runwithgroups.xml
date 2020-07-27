@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite 1" verbose="1">
+    <test name = "Regression Group 1">
+        <groups>
+            <run>
+     <!-- sadece @Test(group = regression1) olan metodlari calistir -->
+                <include name="regression1"></include>
+            </run>
+        </groups>
+        <classes>
+    <!-- Negative Test classindaki regression1 tag'i olan metodlari bul  -->
+            <class name="com.techproed.smoketest.NegativeTest"></class>
+        </classes>
+    </test>
+</suite>
